@@ -1,0 +1,340 @@
+* {
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-color: #000000;
+}
+.container {
+    max-width: 780px;
+    margin: 0 auto;
+    width: 100%;   
+    position: relative;   
+    overflow: hidden;   
+    padding: 0 !important; 
+}
+.container img{
+  width: 100%;
+}
+@media (max-width: 768px) {
+    img {
+        width: 100%;
+    }
+}
+.content img{
+  margin: 1px;
+  margin-top: 5px;
+  background-color: #000000;
+  width: 886px;
+  max-width: 100%;
+  border-radius: 8px;
+  cursor: pointer;
+  animation: pulse 1.2s infinite;
+  /* border: 2px solid #f7e2bf; */
+  cursor: pointer;
+  animation: zoomEffect 5s infinite ease-in-out;
+}
+@keyframes zoomEffect {
+  0% {
+    transform: scale(1);
+  }
+  50% {
+    transform: scale(0.99); /* aumenta */
+  }
+  100% {
+    transform: scale(1); /* volta ao normal */
+  }
+}
+
+h5{
+    text-align: center;
+    color: aliceblue;
+}
+
+/* sss */
+
+.bio-container {
+  max-width: 700px;
+  width: 100%;
+  padding: 20px;
+}
+
+/* Carousel Styles */
+.carousel-container {
+  position: relative;
+  width: 100%;
+  aspect-ratio: 1;
+  border-radius: 24px;
+  overflow: hidden;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  display: flex;
+}
+
+.carousel-wrapper {
+  position: relative;
+  width: 100%;
+  height: 100%;
+}
+
+.carousel-slide {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 0;
+  transition: opacity 0.5s ease-in-out;
+}
+
+.carousel-slide.active {
+  opacity: 1;
+}
+
+.carousel-image {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+  border-radius: 24px;
+}
+main .container
+.carousel-overlay {
+  position: absolute;
+  bottom: 0;
+  left: 0;
+  right: 0;
+  background: linear-gradient(transparent, rgba(0, 0, 0, 0.8));
+  padding: 40px 24px 24px;
+  border-radius: 0 0 24px 24px;
+}
+
+.carousel-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  margin-bottom: 8px;
+  color: white;
+}
+
+.carousel-description {
+  font-size: 0.9rem;
+  color: rgba(255, 255, 255, 0.8);
+  margin: 0;
+}
+
+/* Navigation Arrows */
+.carousel-nav {
+  position: absolute;
+  top: 50%;
+  transform: translateY(-50%);
+  background: rgba(255, 255, 255, 0.1);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.2);
+  border-radius: 50%;
+  width: 48px;
+  height: 48px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: white;
+  cursor: pointer;
+  transition: all 0.3s ease;
+  z-index: 10;
+}
+
+.carousel-nav:hover {
+  background: rgba(255, 255, 255, 0.2);
+  transform: translateY(-50%) scale(1.1);
+}
+
+.carousel-prev {
+  left: 16px;
+}
+
+.carousel-next {
+  right: 16px;
+}
+
+/* Indicators */
+.carousel-indicators {
+  position: absolute;
+  bottom: 16px;
+  left: 35%;
+  transform: translateX(-50%);
+  display: flex;
+  gap: 8px;
+  display: none;
+  z-index: 10;
+}
+
+.indicator {
+  width: 8px;
+  height: 8px;
+  border-radius: 50%;
+  border: none;
+  background: rgba(255, 255, 255, 0.4);
+  cursor: pointer;
+  transition: all 0.3s ease;
+}
+
+.indicator.active {
+  background: white;
+  transform: scale(1.2);
+}
+
+/* Bio Links Styles */
+.bio-links {
+  margin-top: 32px;
+}
+
+.bio-title {
+  font-size: 1.5rem;
+  font-weight: 700;
+  color: white;
+  margin-bottom: 24px;
+}
+
+.bio-link {
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 16px 20px;
+  background: rgba(255, 255, 255, 0.05);
+  backdrop-filter: blur(10px);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 16px;
+  color: white;
+  text-decoration: none;
+  transition: all 0.3s ease;
+  font-weight: 500;
+}
+
+.bio-link:hover {
+  background: rgba(255, 255, 255, 0.1);
+  transform: translateY(-2px);
+  color: white;
+  border-color: rgba(255, 255, 255, 0.2);
+}
+
+.bio-link svg {
+  flex-shrink: 0;
+}
+
+/* Responsive Design */
+@media (max-width: 576px) {
+  .bio-container {
+    padding: 16px;
+  }
+
+  .carousel-nav {
+    width: 40px;
+    height: 40px;
+  }
+
+  .carousel-prev {
+    left: 12px;
+  }
+
+  .carousel-next {
+    right: 12px;
+  }
+
+  .carousel-title {
+    font-size: 1.25rem;
+  }
+
+  .carousel-description {
+    font-size: 0.8rem;
+  }
+
+  .bio-link {
+    padding: 14px 16px;
+    gap: 12px;
+  }
+}
+
+@media (min-width: 768px) {
+  .bio-container {
+    max-width: 100%;
+  }
+}
+
+/* llll */
+.img-texto-cortes{
+  display: flex;
+  justify-content: center;
+}
+
+        /* Seção 2 - Salvação */
+        .video-container {
+            margin: 3rem 0;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+            border: 2px solid rgba(255, 255, 255, 0.4);
+        }
+        .video-container video {
+            width: 100%;
+            height: 350px;
+            object-fit: cover;
+            border-radius: 15px;
+            background: #000000;
+        }
+        .call-to-action {
+            font-style: italic;
+            font-size: 1.3rem;
+            margin-top: 2rem;
+            color: #000000;
+            font-weight: 600;
+            text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3), 0 0 8px rgba(30,144,255,0.2);
+        }
+        /* sssss */
+
+        .section-event {
+            background: radial-gradient(circle at center, #000000 0%, #000000 70%);
+        }
+        .section-event h2,p {
+            color: #000000;
+            text-shadow: 2px 2px 4px rgba(0,0,0,0.4), 0 0 15px rgb(0, 242, 255), 0 0 25px rgba(255,99,71,0.2);
+            text-align: center;
+        }
+        .camera-icon {
+            font-size: 3rem;
+            color: #ffffff;
+            animation: flash 3s ease-in-out infinite;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.3);
+        }
+        @keyframes flash {
+            0%, 100% { 
+                opacity: 0.8; 
+                transform: scale(1); 
+            }
+            50% { 
+                opacity: 1; 
+                transform: scale(1.1); 
+                text-shadow: 0 0 20px #ff6347, 1px 1px 2px rgba(0,0,0,0.3);
+            }
+        }
+        .event-image-container {
+            margin: 3rem 0;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .event-image {
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
+            border: 2px solid rgba(255,99,71,0.4);
+        }
+        .event-image img {
+            width: 100%;
+            height: auto;
+            display: block;
+            border-radius: 18px;
+        }
