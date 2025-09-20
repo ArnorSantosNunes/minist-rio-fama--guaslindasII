@@ -269,21 +269,20 @@ main .container
 
         /* Seção 2 - Salvação */
         .video-container {
-            margin: 3rem 0;
-            border-radius: 20px;
-            overflow: hidden;
-            box-shadow: 0 20px 40px rgba(0,0,0,0.2);
-            max-width: 600px;
-            margin-left: auto;
-            margin-right: auto;
-            border: 2px solid rgba(255, 255, 255, 0.4);
+    position: relative;
+    width: 100%;
+    height: 100vh; /* ocupa a tela inteira */
+    background: #000;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    overflow: hidden;
         }
         .video-container video {
-            width: 100%;
-            height: 350px;
-            object-fit: cover;
-            border-radius: 15px;
-            background: #000000;
+    width: 100%;
+    height: 100%;
+    object-fit: contain; /* mostra o vídeo inteiro */
+    background: #000;
         }
         .call-to-action {
             font-style: italic;
@@ -293,13 +292,24 @@ main .container
             font-weight: 600;
             text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3), 0 0 8px rgba(30,144,255,0.2);
         }
+        .video-container::after {
+    content: "";
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    border: 6px solid rgba(255, 255, 255, 0.15); /* borda transparente */
+    border-radius: 12px;
+    pointer-events: none;
+}
         /* sssss */
 
         .section-event {
             background: radial-gradient(circle at center, #000000 0%, #000000 70%);
         }
         .section-event h2,p {
-            color: #000000;
+            color: #ffffff;
             text-shadow: 2px 2px 4px rgba(0,0,0,0.4), 0 0 15px rgb(0, 242, 255), 0 0 25px rgba(255,99,71,0.2);
             text-align: center;
         }
@@ -338,3 +348,86 @@ main .container
             display: block;
             border-radius: 18px;
         }
+        /* Seção 4 - Localização da Igreja */
+        .section-4 {
+            background: radial-gradient(circle at center, #000000 0%, #000000 70%);
+        }
+        .section-4 h2 {
+            color: #000000;
+            text-shadow: 2px 2px 4px rgba(255, 255, 255, 0.4), 0 0 15px rgba(76,175,80,0.3), 0 0 25px rgba(76,175,80,0.2);
+        }
+        .location-icon {
+            font-size: 3rem;
+            color: #228b22;
+            animation: pulse 2s ease-in-out infinite;
+            text-shadow: 1px 1px 2px rgba(255, 255, 255, 0.3);
+        }
+        @keyframes pulse {
+            0% { transform: scale(1); }
+            50% { transform: scale(1.1); }
+            100% { transform: scale(1); }
+        }
+        .map-container {
+            margin: 3rem 0;
+            border-radius: 20px;
+            overflow: hidden;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+            width: 100%;
+            margin-left: auto;
+            margin-right: auto;
+            border: 2px solid rgba(226, 230, 226, 0.4);
+        }
+        .map-container iframe {
+            width: 100%;
+            height: 400px;
+            border: none;
+        }
+        .church-info {
+            display: flex;
+            flex-direction: column;
+            gap: 1rem;
+            margin: 2rem 0;
+            max-width: 600px;
+            margin-left: auto;
+            margin-right: auto;
+        }
+        .info-item {
+            display: flex;
+            align-items: center;
+            gap: 1rem;
+            padding: 1rem;
+            background: rgba(243, 242, 242, 0.05);
+            border-radius: 10px;
+            border: 1px solid rgba(255, 255, 255, 0.3);
+        }
+        .info-item i {
+            color: #ffffff;
+            font-size: 1.2rem;
+            min-width: 20px;
+        }
+        .info-item span {
+            color: #ffffff;
+            font-size: 1.1rem;
+            font-weight: 600;
+            text-shadow: 1px 1px 2px rgba(0,0,0,0.2);
+        }
+        .section-content button {
+    margin-top: 20px;
+    padding: 10px 20px;
+    font-size: 1.2rem;
+    border-radius: 8px;
+    background: #0dcaf0;
+    border: none;
+    color: #fff;
+    cursor: pointer;
+    transition: 0.3s;
+        }
+        .section-content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+        }
+        .section-content button:hover {
+    background: #0bb1d4;
+}

@@ -3,7 +3,7 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Barbearia</title>
+    <title>Ministerio Fama Águas lindas 2</title>
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0/dist/css/bootstrap.min.css" rel="stylesheet">
     <link rel="stylesheet" href="./styles.css">
 </head>
@@ -12,12 +12,20 @@
             <img src="./img/jesus1.png" alt="Banner" >
             <img src="./img/jesus2.png" alt="Banner" >
         <div class="bio-container">
+                          <section class="section section-event" id="section-3">
+            <div class="section-content fade-in">
+                <h2>✨ Venha nos visitar ✨ <i class="fas fa-calendar-alt camera-icon"></i></h2>
+                <p>Você é nosso convidado especial! Participe do nosso culto/evento e viva momentos de fé, <br> comunhão e adoração. Esperamos por você!</p>
+
+
+            </div>
+        </section>
                   <!-- Seção 2 - Salvação -->
         <section class="section section-2" id="section-2">
             <div class="section-content fade-in">           
                 <div class="video-container">
                     <video controls preload="metadata" poster="/placeholder.svg?height=350&width=600">
-                        <source src="./img/WhatsApp Video 2025-08-30 at 21.23.13.mp4" type="video/mp4">
+                        <source src="./img/WhatsApp Video 2025-09-20 at 09.23.04.mp4" type="video/mp4">
                         Seu navegador não suporta vídeo HTML5.
                     </video>
                 </div>
@@ -26,8 +34,8 @@
         <!-- sessao3 -->
                 <section class="section section-event" id="section-3">
             <div class="section-content fade-in">
-                <h2>Evento Especial <i class="fas fa-calendar-alt camera-icon"></i></h2>
-                <p>Venha participar do nosso próximo evento</p>
+                <h2>Culto Especial <i class="fas fa-calendar-alt camera-icon"></i></h2>
+                <p>Venha participar do nosso próximo culto</p>
 
 
             </div>
@@ -76,7 +84,43 @@
             </div>
             
     </div>
+            <!-- Seção 4 - Localização da Igreja -->
+        <section class="section section-4" id="section-4">
+            <div class="section-content fade-in">
+                
+                <p>Encontre nossa igreja e faça parte da nossa comunidade de fé</p>
+                                
+                <div class="map-container">
+                    <iframe
+                        src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d61428.356835558494!2d-48.3643638783203!3d-15.789589499999977!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x935bc710ee39e6cd%3A0xc02623a35ee8a92e!2sAssembl%C3%A9ia%20De%20Deus%20Fama!5e0!3m2!1spt-PT!2sbr!4v1758374237816!5m2!1spt-PT!2sbr" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade" width="600" height="450" style="border:0;" allowfullscreen="" loading="lazy" referrerpolicy="no-referrer-when-downgrade"
+                        allowfullscreen=""
+                        loading="lazy"
+                        referrerpolicy="no-referrer-when-downgrade">
+                    </iframe>
+                </div>
+                                        
+                <div class="church-info">
+                    <div class="info-item">
+                        <i class="fas fa-map-marker-alt"></i>
+                        <span><p>Lote 34 - Q. 23 - Jardim Aguas Lindas, <br> Águas Lindas de Goiás - GO, 72910-000</p></span>
+                    </div>
+                    <div class="info-item">
+                        <i class="fas fa-clock"></i>
+                        <span>Cultos: Dom 18h | Ter 19h</span>
+                    </div>
+                    <!-- <div class="info-item">
+                        <i class="fas fa-phone"></i>
+                        <span>(11) 3107-6832</span>
+                    </div> -->
+                </div>
+                                
+                <button class="prayer-btn" onclick="openGoogleMaps()">
+                    <i class="fas fa-directions me-2"></i>Quero Chegar
+                </button>
+            </div>
+        </section>
     <p style="font-size: 40px;">Redes socias:</p>
+          <p>Clica aqui 👇</p>
           <img class="img-texto-cortes" src="./img/text-cortes.png" alt="">
       
                         <div class="content">
@@ -183,7 +227,11 @@ function initCarousel(carousel) {
   showSlide(0)
   startAutoPlay()
 }
-
+        // Função para abrir Google Maps
+        function openGoogleMaps() {
+            const googleMapsUrl = `https://maps.app.goo.gl/FdtBjD3YAfe9zefM8`;
+            window.open(googleMapsUrl, '_blank');
+        }
     </script>
 </body>
 </html>
